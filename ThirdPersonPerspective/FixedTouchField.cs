@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-
+//Attach This Script to Canvas Panel
 public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [HideInInspector]
