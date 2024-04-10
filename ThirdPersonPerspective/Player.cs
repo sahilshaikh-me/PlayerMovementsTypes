@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//Attach This Script to Player
 public class Player : MonoBehaviour
 {
+
     public static Player Instance { get; set; }
     #region Fpp Variable
     public float MoveSpeed = 3;
