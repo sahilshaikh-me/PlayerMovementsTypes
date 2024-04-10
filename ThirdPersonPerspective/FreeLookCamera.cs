@@ -1,5 +1,5 @@
 using UnityEngine;
-
+//Attach This Script to Main Camera Its ok If Its in Child of Player
 public class FreeLookCamera : MonoBehaviour
 {
     public Transform target; // Target object to look at (e.g., player)
