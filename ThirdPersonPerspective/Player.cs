@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float speedSmoothTime = 0.1f;
     float speedDmoothVelocity;
     Transform cameraT;
+   //CharacterController controller; fix while roatating player moving forward
     #endregion
     public bool isFpp;
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         cameraT = Camera.main.transform;
+         controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -55,7 +57,25 @@ public class Player : MonoBehaviour
                 transform.Translate(transform.forward * MoveSpeed * Time.deltaTime, Space.World);
 
             }
+            //Fix Movements and rotations
+ //float horizontal = Input.GetAxis("Horizontal");
+ //float vertical = Input.GetAxis("Vertical");
+ // inputDir = new Vector3(horizontal, 0f, vertical).normalized;
 
+ //if (inputDir.magnitude >= 0.1f)
+ //{
+ //    float targetRotation = Mathf.Atan2(inputDir.x, inputDir.z) * Mathf.Rad2Deg + cameraT.eulerAngles.y;
+ //    transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
+
+  //   Vector3 moveDir = Quaternion.Euler(0f, targetRotation, 0f) * Vector3.forward;
+  //   controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+
+    // animator.SetFloat("Speed", moveDir.magnitude);
+ //}
+// else
+// {
+    // animator.SetFloat("Speed", 0f);
+// }
           
 
             // Only move if not in FPP mode
